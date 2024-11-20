@@ -29,4 +29,8 @@ def calculate_partial_factorial():
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     app.run(host='0.0.0.0', port=5001)
+=======
+    app.run(host='0.0.0.0', port=5001)
+>>>>>>> a975af4e2af12457d2982f055058a38f569ffc64
