@@ -1,9 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-<<<<<<< HEAD
-import requests  # Assurez-vous d'importer 'requests' et non 'request'
-=======
 import requests  
->>>>>>> a975af4e2af12457d2982f055058a38f569ffc64
 import math
 import time
 import numpy as np
