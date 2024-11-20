@@ -4,7 +4,7 @@ import os
 from flask_cors import CORS
 app = Flask(__name__)
 
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "http://allowed-origin.com"}})
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -23,7 +23,7 @@ def calculate_factorial():
         factorial_half *= i
     
     # Send the half result to the worker node
-    worker_url = 'http://10.26.14.209:5001/calculate'
+    worker_url = 'http://192.168.1.107:5001/calculate'
     response = requests.post(worker_url, json={'start': half + 1, 'end': n})
     if response.status_code == 200:
         factorial_worker = response.json()['partial_factorial']
